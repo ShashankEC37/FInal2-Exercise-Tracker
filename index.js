@@ -6,6 +6,11 @@ const { Schema } = mongoose;
 
 const DB = "mongodb+srv://Shamika:Shamika1417@cluster0.onxwo2y.mongodb.net/exercise?retryWrites=true&w=majority"
 
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html')
+});
+
+
 mongoose.connect(DB, {
   useNewUrlParser: true,
   useUnifiedTopology: true
